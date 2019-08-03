@@ -9,14 +9,36 @@
   </head>
   <body>
     <div class='spinbox'>
-      <input type="number" value="0"/>
-      <button type="button" onclick=null />
-      ▲
-      <button type="button" onclick=null />
-      ▼
+      <input type="number" data-button-type='input' value="0"/>
+      <button type="button" data-button-type='up' onmousedown=null>
+        ▲
+      </button>
+      <button type="button" data-button-type='down' onmousedown=null>
+        ▼
+      </button>
     </div>
    </body>
   </html>
+```
+
+```javascript
+  var i = 0;
+  var elements = document.querySelector('.spinbox').childNodes;
+  var inputBox, upButton, downButton;
+
+  for (i = 0; i < elements.length; i += 1) {
+    if (elements[i].dataset) {
+      if (elements[i].dataset.buttonType === 'input') {
+        inputBox = elements[i];
+      }
+      if (elements[i].dataset.buttonType === 'up') {
+        upButton = elements[i];
+      }
+      if (elements[i].dataset.buttonType === 'down') {
+        downButton = elements[i];
+      }
+    }
+  }
 ```
 ---
 

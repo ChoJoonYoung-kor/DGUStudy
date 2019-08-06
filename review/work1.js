@@ -19,7 +19,7 @@ window.onload = function(){
     ibx.addEventListener("blur",
         function(e){
             alert("좋은말로할때 문자는 지워라");
-            for(var i = 0; i < ibx.value.length; i++)
+            //for(var i = 0; i < ibx.value.length; i++)
         }
     );
     

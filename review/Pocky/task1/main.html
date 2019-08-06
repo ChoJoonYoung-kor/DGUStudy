@@ -5,12 +5,12 @@
     <title>Spinbox</title>
 </head>
 <body>
-    <div class="spinbox">
+    <div class="spinbox" style="margin-top: 100px; text-align: center;">
         <input type="number" data-button-type='input' value="0" />
-        <button type="button" data-button-type='up' onmouseup="spinbox.addNum()" ondrag="spinbox.addNum()">
+        <button type="button" data-button-type='up' onmousedown="spinbox.addNum(), spinbox.startPress()" onmouseup="spinbox.endPress()">
             ▲
         </button>
-        <button type="button" data-button-type='down' onmouseup="spinbox.minusNum()">
+        <button type="button" data-button-type='down' onmousedown="spinbox.minusNum(), spinbox.startPress()" onmouseup="spinbox.endPress()">
             ▼
         </button>
     </div>

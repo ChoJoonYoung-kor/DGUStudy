@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Spinbox</title>
+    <meta charset="UTF-8">
+    <title>Spinbox</title>
 </head>
 <body>
-  <div class="spinbox">
-    <input type="number" data-button-type='input' value="0"/>
-    <button type="button" data-button-type='up' onmousedown="spinbox.addNum()">
-      ▲
-    </button>
-    <button type="button" data-button-type='down' onmousedown="spinbox.minusNum()">
-      ▼
-    </button>
-  </div>
-  <script src="main.js">
-  </script>
- </body>
+    <div class="spinbox">
+        <input type="number" data-button-type='input' value="0" />
+        <button type="button" data-button-type='up' onmouseup="spinbox.addNum()" ondrag="spinbox.addNum()">
+            ▲
+        </button>
+        <button type="button" data-button-type='down' onmouseup="spinbox.minusNum()">
+            ▼
+        </button>
+    </div>
+    <script src="main.js">
+    </script>
+</body>
 </html>

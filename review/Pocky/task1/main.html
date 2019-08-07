@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Spinbox</title>
+    <style>
+        /* button,
+        input{
+            border: 1px solid #000;
+        } */
+        .spinbox{
+            margin-top: 100px; text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <div class="spinbox" style="margin-top: 100px; text-align: center;">
+    <div class="spinbox">
         <input type="number" data-button-type='input' value="0" />
-        <button type="button" data-button-type='up' onmousedown="spinbox.addNum(), spinbox.startPress()" onmouseup="spinbox.endPress()">
+        <button type="button" data-button-type='up' onmousedown=null>
             ▲
         </button>
-        <button type="button" data-button-type='down' onmousedown="spinbox.minusNum(), spinbox.startPress()" onmouseup="spinbox.endPress()">
+        <button type="button" data-button-type='down' onmousedown=null>
+            ▼
+        </button>
+    </div>
+    <div class="spinbox">
+        <input type="number" data-button-type='input' value="0" />
+        <button type="button" data-button-type='up' onmousedown=null>
+            ▲
+        </button>
+        <button type="button" data-button-type='down' onmousedown=null>
             ▼
         </button>
     </div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spinbox</title>
+</head>
+<body>
+<div class='spinbox'>
+    <input type="text" data-button-type='input'/>
+    <button type="button" data-button-type='up'>
+        ▲
+    </button>
+    <button type="button" data-button-type='down'>
+        ▼
+    </button>
+</div>
+
+<div class='spinbox'>
+    <input type="text" data-button-type='input'/>
+    <button type="button" data-button-type='up'>
+        ▲
+    </button>
+    <button type="button" data-button-type='down'>
+        ▼
+    </button>
+</div>
+
+<!-- 스핀박스 객체 -->
+<script type="text/javascript" src="./SpinboxExample.js"></script>
+<!--사용 예제-->
+<script type="text/javascript">
+  window.onload = function () {
+    var elements = document.querySelectorAll('.spinbox');
+    var spinbox = [];
+
+    elements.forEach(element => {
+      spinbox.push(new Spinbox(element))
+    });
+
+    spinbox.forEach(element => {
+      element.printlog();
+      element.initEvent();
+      element.initEvents();
+    })
+  }
+</script>
+
+</body>
+</html>

@@ -26,7 +26,7 @@ function student2(){
     this.scoreEnglish = 0;
     this.scoreMath = 0;
      
-     this.getName = function(){
+    this.getName = function(){
         return this.name;
      };
      this.toString = function(){
